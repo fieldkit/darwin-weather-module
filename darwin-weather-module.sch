@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.0">
+<eagle version="9.6.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -10,6 +10,18 @@
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
 <layer number="15" name="Route15" color="23" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
@@ -335,6 +347,21 @@
 <text x="0" y="2.5375" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-2.185" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
 </package>
+<package name="TC2030-IDC" urn="urn:adsk.eagle:footprint:16969549/1" library_version="71" library_locally_modified="yes">
+<hole x="0" y="0" drill="0.9906"/>
+<hole x="5.08" y="1.016" drill="0.9906"/>
+<hole x="5.08" y="-1.016" drill="0.9906"/>
+<hole x="0" y="2.54" drill="2.3749"/>
+<hole x="0" y="-2.54" drill="2.3749"/>
+<hole x="3.175" y="2.54" drill="2.3749"/>
+<hole x="3.175" y="-2.54" drill="2.3749"/>
+<smd name="VCC" x="1.27" y="-0.635" dx="0.7874" dy="0.7874" layer="1" roundness="100"/>
+<smd name="SWDIO/TMS" x="1.27" y="0.508" dx="0.7874" dy="0.7874" layer="1" roundness="100"/>
+<smd name="NRESET" x="2.54" y="-0.635" dx="0.7874" dy="0.7874" layer="1" roundness="100"/>
+<smd name="SWCLK/TCK" x="2.54" y="0.508" dx="0.7874" dy="0.7874" layer="1" roundness="100"/>
+<smd name="GND" x="3.81" y="-0.635" dx="0.7874" dy="0.7874" layer="1" roundness="100"/>
+<smd name="SWO/TDO" x="3.81" y="0.508" dx="0.7874" dy="0.7874" layer="1" roundness="100"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="M20-7810645" urn="urn:adsk.eagle:package:11839232/3" type="model" library_version="18">
@@ -384,6 +411,11 @@
 &lt;p&gt;10-pin SOP package with 0.50 mm pitch, 4.90 mm span with body size 3.00 X 3.00 X 1.10 mm&lt;/p&gt;</description>
 <packageinstances>
 <packageinstance name="SOP50P490X110-10"/>
+</packageinstances>
+</package3d>
+<package3d name="TC2030-IDC" urn="urn:adsk.eagle:package:16969550/1" type="box" library_version="71" library_locally_modified="yes">
+<packageinstances>
+<packageinstance name="TC2030-IDC"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -497,6 +529,27 @@
 <wire x1="-15.24" y1="-15.24" x2="-15.24" y2="15.24" width="0.254" layer="94"/>
 <text x="-7.62" y="10.16" size="1.778" layer="94">PCA9615DP</text>
 <text x="-15.494" y="16.256" size="1.778" layer="94">&gt;NAME</text>
+</symbol>
+<symbol name="TC2030-IDC" urn="urn:adsk.eagle:symbol:16969548/2" library_version="71" library_locally_modified="yes">
+<pin name="VCC" x="-7.62" y="2.54" visible="pad" length="middle"/>
+<pin name="GND" x="-7.62" y="0" visible="pad" length="middle"/>
+<pin name="SWDIO" x="7.62" y="2.54" visible="pad" length="middle" rot="R180"/>
+<pin name="SWCLK" x="7.62" y="0" visible="pad" length="middle" rot="R180"/>
+<pin name="SWO" x="7.62" y="-2.54" visible="pad" length="middle" rot="R180"/>
+<pin name="RESET" x="7.62" y="-5.08" visible="pad" length="middle" rot="R180"/>
+<wire x1="-10.16" y1="-7.62" x2="-10.16" y2="8.89" width="0.508" layer="94"/>
+<wire x1="-10.16" y1="8.89" x2="17.78" y2="8.89" width="0.508" layer="94"/>
+<wire x1="17.78" y1="8.89" x2="17.78" y2="-7.62" width="0.508" layer="94"/>
+<wire x1="17.78" y1="-7.62" x2="-10.16" y2="-7.62" width="0.508" layer="94"/>
+<wire x1="-9.652" y1="5.08" x2="17.78" y2="5.08" width="0.254" layer="94" style="shortdash"/>
+<circle x="-2.032" y="2.54" radius="0.567959375" width="0.254" layer="94"/>
+<circle x="-2.032" y="0" radius="0.567959375" width="0.254" layer="94"/>
+<circle x="2.032" y="2.54" radius="0.567959375" width="0.254" layer="94"/>
+<circle x="2.032" y="0" radius="0.567959375" width="0.254" layer="94"/>
+<circle x="2.032" y="-2.54" radius="0.567959375" width="0.254" layer="94"/>
+<circle x="2.032" y="-5.08" radius="0.567959375" width="0.254" layer="94"/>
+<text x="-4.572" y="6.096" size="1.778" layer="94">PROG. HEADER</text>
+<text x="-10.16" y="9.652" size="1.778" layer="95">&gt;NAME</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -703,6 +756,29 @@
 </connects>
 <package3dinstances>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:12823946/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TAG-CONNECT" urn="urn:adsk.eagle:component:16969551/2" prefix="J" library_version="71" library_locally_modified="yes">
+<gates>
+<gate name="G$1" symbol="TC2030-IDC" x="-2.54" y="0"/>
+</gates>
+<devices>
+<device name="" package="TC2030-IDC">
+<connects>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="RESET" pad="NRESET"/>
+<connect gate="G$1" pin="SWCLK" pad="SWCLK/TCK"/>
+<connect gate="G$1" pin="SWDIO" pad="SWDIO/TMS"/>
+<connect gate="G$1" pin="SWO" pad="SWO/TDO"/>
+<connect gate="G$1" pin="VCC" pad="VCC"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16969550/1"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -13882,232 +13958,6 @@ Warning: This is the KIT version of the AXIAL-0.3 package. This package has a sm
 </deviceset>
 </devicesets>
 </library>
-<library name="microbuilder">
-<packages>
-<package name="2X05_1.27MM_SMT">
-<description>&lt;p&gt;2x05 1.27mm Headers SMT (2.0mm Height)&lt;/p&gt;
-4UConnector: 16846</description>
-<wire x1="-5.27" y1="3.5" x2="5.27" y2="3.5" width="0.2032" layer="21"/>
-<wire x1="5.27" y1="3.5" x2="5.27" y2="-3.5" width="0.2032" layer="21"/>
-<wire x1="5.27" y1="-3.5" x2="1" y2="-3.5" width="0.2032" layer="21"/>
-<wire x1="1" y1="-3.5" x2="-1" y2="-3.5" width="0.2032" layer="21"/>
-<wire x1="-1" y1="-3.5" x2="-5.27" y2="-3.5" width="0.2032" layer="21"/>
-<wire x1="-5.27" y1="-3.5" x2="-5.27" y2="3.5" width="0.2032" layer="21"/>
-<wire x1="-1" y1="-3.5" x2="-1" y2="-4" width="0.2032" layer="21"/>
-<wire x1="-1" y1="-4" x2="1" y2="-4" width="0.2032" layer="21"/>
-<wire x1="1" y1="-4" x2="1" y2="-3.5" width="0.2032" layer="21"/>
-<smd name="1" x="-2.54" y="-1.85" dx="0.65" dy="2.6" layer="1"/>
-<smd name="2" x="-2.54" y="1.85" dx="0.65" dy="2.6" layer="1"/>
-<smd name="3" x="-1.27" y="-1.85" dx="0.65" dy="2.6" layer="1"/>
-<smd name="4" x="-1.27" y="1.85" dx="0.65" dy="2.6" layer="1"/>
-<smd name="5" x="0" y="-1.85" dx="0.65" dy="2.6" layer="1"/>
-<smd name="6" x="0" y="1.85" dx="0.65" dy="2.6" layer="1"/>
-<smd name="7" x="1.27" y="-1.85" dx="0.65" dy="2.6" layer="1"/>
-<smd name="8" x="1.27" y="1.85" dx="0.65" dy="2.6" layer="1"/>
-<smd name="9" x="2.54" y="-1.85" dx="0.65" dy="2.6" layer="1"/>
-<smd name="10" x="2.54" y="1.85" dx="0.65" dy="2.6" layer="1"/>
-<text x="-5.199" y="3.806" size="0.8128" layer="25" ratio="18">&gt;NAME</text>
-<text x="-5.199" y="-4.2465" size="0.4064" layer="27" ratio="10">&gt;VALUE</text>
-<polygon width="0.127" layer="21">
-<vertex x="1.016" y="-3.556"/>
-<vertex x="1.016" y="-3.937"/>
-<vertex x="-1.016" y="-3.937"/>
-<vertex x="-1.016" y="-3.556"/>
-</polygon>
-</package>
-<package name="2X05_1.27MM_BOX_NOPOSTS">
-<description>&lt;p&gt;4UCon: 19735 (with cap), 15117 (without caps)&lt;/p&gt;</description>
-<wire x1="-6.45" y1="2.6" x2="6.45" y2="2.6" width="0.127" layer="51"/>
-<wire x1="6.45" y1="2.6" x2="6.45" y2="-2.6" width="0.127" layer="51"/>
-<wire x1="-6.45" y1="-2.6" x2="-6.45" y2="2.6" width="0.127" layer="51"/>
-<wire x1="-1.2" y1="-2.6" x2="-6.45" y2="-2.6" width="0.127" layer="51"/>
-<wire x1="6.45" y1="-2.6" x2="1.2" y2="-2.6" width="0.127" layer="51"/>
-<wire x1="-5.575" y1="1.8" x2="5.575" y2="1.8" width="0.127" layer="51"/>
-<wire x1="5.575" y1="1.8" x2="5.575" y2="-1.8" width="0.127" layer="51"/>
-<wire x1="-5.575" y1="-1.8" x2="-5.575" y2="1.8" width="0.127" layer="51"/>
-<wire x1="-1.2" y1="-1.8" x2="-5.575" y2="-1.8" width="0.127" layer="51"/>
-<wire x1="5.575" y1="-1.8" x2="1.2" y2="-1.8" width="0.127" layer="51"/>
-<wire x1="-1.2" y1="-1.8" x2="-1.2" y2="-2.6" width="0.127" layer="51"/>
-<wire x1="1.2" y1="-1.8" x2="1.2" y2="-2.6" width="0.127" layer="51"/>
-<wire x1="-3.2" y1="2.7" x2="-6.6" y2="2.7" width="0.127" layer="21"/>
-<wire x1="-6.6" y1="2.7" x2="-6.6" y2="-2.7" width="0.127" layer="21"/>
-<wire x1="-6.6" y1="-2.7" x2="-3.2" y2="-2.7" width="0.127" layer="21"/>
-<wire x1="3.2" y1="2.7" x2="6.6" y2="2.7" width="0.127" layer="21"/>
-<wire x1="6.6" y1="2.7" x2="6.6" y2="-2.7" width="0.127" layer="21"/>
-<wire x1="6.6" y1="-2.7" x2="3.2" y2="-2.7" width="0.127" layer="21"/>
-<smd name="1" x="-2.54" y="-1.95" dx="0.76" dy="2.4" layer="1"/>
-<smd name="2" x="-2.54" y="1.95" dx="0.76" dy="2.4" layer="1"/>
-<smd name="3" x="-1.27" y="-1.95" dx="0.76" dy="2.4" layer="1"/>
-<smd name="4" x="-1.27" y="1.95" dx="0.76" dy="2.4" layer="1"/>
-<smd name="5" x="0" y="-1.95" dx="0.76" dy="2.4" layer="1"/>
-<smd name="6" x="0" y="1.95" dx="0.76" dy="2.4" layer="1"/>
-<smd name="7" x="1.27" y="-1.95" dx="0.76" dy="2.4" layer="1"/>
-<smd name="8" x="1.27" y="1.95" dx="0.76" dy="2.4" layer="1"/>
-<smd name="9" x="2.54" y="-1.95" dx="0.76" dy="2.4" layer="1"/>
-<smd name="10" x="2.54" y="1.95" dx="0.76" dy="2.4" layer="1"/>
-<text x="-6.6" y="3" size="0.8128" layer="25" ratio="18">&gt;NAME</text>
-<text x="-6.1" y="-2.4" size="0.4064" layer="27" ratio="10">&gt;VALUE</text>
-<polygon width="0.127" layer="21">
-<vertex x="-6.5" y="-4"/>
-<vertex x="-5.5" y="-4"/>
-<vertex x="-6" y="-3"/>
-</polygon>
-</package>
-<package name="2X05_1.27MM_BOX_POSTS">
-<description>&lt;p&gt;4UCon: 20317&lt;/p&gt;</description>
-<wire x1="-6.275" y1="2.5" x2="6.275" y2="2.5" width="0.127" layer="51"/>
-<wire x1="6.275" y1="2.5" x2="6.275" y2="-2.5" width="0.127" layer="51"/>
-<wire x1="-6.275" y1="-2.5" x2="-6.275" y2="2.5" width="0.127" layer="51"/>
-<wire x1="-1.25" y1="-2.5" x2="-6.275" y2="-2.5" width="0.127" layer="51"/>
-<wire x1="6.275" y1="-2.5" x2="1.25" y2="-2.5" width="0.127" layer="51"/>
-<wire x1="-5.425" y1="1.65" x2="5.425" y2="1.65" width="0.127" layer="51"/>
-<wire x1="5.425" y1="1.65" x2="5.425" y2="-1.65" width="0.127" layer="51"/>
-<wire x1="-5.425" y1="-1.65" x2="-5.425" y2="1.65" width="0.127" layer="51"/>
-<wire x1="-1.25" y1="-1.65" x2="-5.425" y2="-1.65" width="0.127" layer="51"/>
-<wire x1="5.425" y1="-1.65" x2="1.25" y2="-1.65" width="0.127" layer="51"/>
-<wire x1="-1.25" y1="-1.65" x2="-1.25" y2="-2.5" width="0.127" layer="51"/>
-<wire x1="1.25" y1="-1.65" x2="1.25" y2="-2.5" width="0.127" layer="51"/>
-<wire x1="-3.2" y1="2.7" x2="-6.5" y2="2.7" width="0.127" layer="21"/>
-<wire x1="-6.5" y1="2.7" x2="-6.5" y2="-2.7" width="0.127" layer="21"/>
-<wire x1="-6.5" y1="-2.7" x2="-3.2" y2="-2.7" width="0.127" layer="21"/>
-<wire x1="3.2" y1="2.7" x2="6.5" y2="2.7" width="0.127" layer="21"/>
-<wire x1="6.5" y1="2.7" x2="6.5" y2="-2.7" width="0.127" layer="21"/>
-<wire x1="6.5" y1="-2.7" x2="3.2" y2="-2.7" width="0.127" layer="21"/>
-<smd name="1" x="-2.54" y="-2.15" dx="0.76" dy="2.6" layer="1"/>
-<smd name="2" x="-2.54" y="2.15" dx="0.76" dy="2.6" layer="1"/>
-<smd name="3" x="-1.27" y="-2.15" dx="0.76" dy="2.6" layer="1"/>
-<smd name="4" x="-1.27" y="2.15" dx="0.76" dy="2.6" layer="1"/>
-<smd name="5" x="0" y="-2.15" dx="0.76" dy="2.6" layer="1"/>
-<smd name="6" x="0" y="2.15" dx="0.76" dy="2.6" layer="1"/>
-<smd name="7" x="1.27" y="-2.15" dx="0.76" dy="2.6" layer="1"/>
-<smd name="8" x="1.27" y="2.15" dx="0.76" dy="2.6" layer="1"/>
-<smd name="9" x="2.54" y="-2.15" dx="0.76" dy="2.6" layer="1"/>
-<smd name="10" x="2.54" y="2.15" dx="0.76" dy="2.6" layer="1"/>
-<text x="-6.6" y="3" size="0.8128" layer="25" ratio="18">&gt;NAME</text>
-<text x="-6.1" y="-2.4" size="0.4064" layer="27" ratio="10">&gt;VALUE</text>
-<hole x="-1.905" y="0" drill="1"/>
-<hole x="1.905" y="0" drill="1"/>
-<polygon width="0.127" layer="21">
-<vertex x="-6.5" y="-4"/>
-<vertex x="-5.5" y="-4"/>
-<vertex x="-6" y="-3"/>
-</polygon>
-</package>
-</packages>
-<symbols>
-<symbol name="JTAG-CORTEX">
-<circle x="-4.445" y="5.08" radius="0.635" width="0.254" layer="94"/>
-<circle x="-4.445" y="2.54" radius="0.635" width="0.254" layer="94"/>
-<circle x="-4.445" y="0" radius="0.635" width="0.254" layer="94"/>
-<circle x="-4.445" y="-2.54" radius="0.635" width="0.254" layer="94"/>
-<circle x="-4.445" y="-5.08" radius="0.635" width="0.254" layer="94"/>
-<circle x="4.445" y="5.08" radius="0.635" width="0.254" layer="94"/>
-<circle x="4.445" y="2.54" radius="0.635" width="0.254" layer="94"/>
-<circle x="4.445" y="0" radius="0.635" width="0.254" layer="94"/>
-<circle x="4.445" y="-2.54" radius="0.635" width="0.254" layer="94"/>
-<circle x="4.445" y="-5.08" radius="0.635" width="0.254" layer="94"/>
-<wire x1="-6.35" y1="7.62" x2="6.35" y2="7.62" width="0.4064" layer="94"/>
-<wire x1="6.35" y1="-7.62" x2="6.35" y2="7.62" width="0.4064" layer="94"/>
-<wire x1="6.35" y1="-7.62" x2="-6.35" y2="-7.62" width="0.4064" layer="94"/>
-<wire x1="-6.35" y1="7.62" x2="-6.35" y2="-7.62" width="0.4064" layer="94"/>
-<pin name="GND@1" x="-7.62" y="2.54" visible="off" length="short" direction="pwr" swaplevel="1"/>
-<pin name="GND@2" x="-7.62" y="0" visible="off" length="short" direction="pwr" swaplevel="1"/>
-<pin name="GNDDETECT" x="-7.62" y="-5.08" visible="off" length="short" swaplevel="1"/>
-<pin name="KEY" x="-7.62" y="-2.54" visible="off" length="short" swaplevel="1"/>
-<pin name="NRESET" x="7.62" y="-5.08" visible="off" length="short" swaplevel="1" rot="R180"/>
-<pin name="SWDCLK" x="7.62" y="2.54" visible="off" length="short" swaplevel="1" rot="R180"/>
-<pin name="SWDIO" x="7.62" y="5.08" visible="off" length="short" swaplevel="1" rot="R180"/>
-<pin name="SWO" x="7.62" y="0" visible="off" length="short" swaplevel="1" rot="R180"/>
-<pin name="TDI" x="7.62" y="-2.54" visible="off" length="short" swaplevel="1" rot="R180"/>
-<pin name="VCC" x="-7.62" y="5.08" visible="off" length="short" direction="pwr" swaplevel="1"/>
-<text x="-6.35" y="8.255" size="1.27" layer="95">&gt;NAME</text>
-<text x="1.524" y="-4.318" size="0.635" layer="95">nRESET</text>
-<text x="1.778" y="-1.778" size="0.635" layer="95">NC/TDI</text>
-<text x="1.016" y="0.762" size="0.635" layer="95">SWO/TDO</text>
-<text x="-0.762" y="3.302" size="0.635" layer="95">SWDCLK/TCK</text>
-<text x="0" y="5.842" size="0.635" layer="95">SWDIO/TMS</text>
-<text x="-5.588" y="6.096" size="0.635" layer="95">VCC</text>
-<text x="-5.588" y="3.302" size="0.635" layer="95">GND</text>
-<text x="-5.588" y="0.762" size="0.635" layer="95">GND</text>
-<text x="-5.588" y="-1.778" size="0.635" layer="95">KEY</text>
-<text x="-5.588" y="-4.318" size="0.635" layer="95">GNDDetect</text>
-<text x="-6.35" y="-9.525" size="1.27" layer="96">&gt;VALUE</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="JTAG-CORTEX" prefix="X" uservalue="yes">
-<description>&lt;p&gt;&lt;b&gt;Serial Wire (SW-DP) Connector&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;Standard 0.05" 10-pin connector is for use with the Cortex M and Cortex A SWD (serial wire debugger) interface (SW-DP)&lt;/p&gt;
-&lt;b&gt;Connectors&lt;/b&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;b&gt;2x05_1.27MM_SMT&lt;/b&gt; - Inexpensive surface-mount header with bare pins, compatible with standard 10-pin SWD cables (4UCON: 16846)&lt;/li&gt;
-&lt;li&gt;&lt;b&gt;2x05_1.27MM_BOX_NOPOSTS&lt;/b&gt; - Polarised surface-mount box (4UCON with caps: 19735, without caps: 15117&lt;/li&gt;
-&lt;li&gt;&lt;b&gt;2x05_1.27MM_BOX_POSTS&lt;/b&gt; - Polarised surface-mount box with mounting holes (4UCON: 20317)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;b&gt;Pinout:&lt;/b&gt;
-&lt;ul&gt;
-&lt;li&gt;http://infocenter.arm.com/help/topic/com.arm.doc.faqs/attached/13634/cortex_debug_connectors.pdf&lt;/li&gt;
-&lt;li&gt;http://www.keil.com/peripherals/coresight/connectors.asp&lt;/li&gt;
-&lt;/ul&gt;</description>
-<gates>
-<gate name="G$1" symbol="JTAG-CORTEX" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="2X05_1.27MM_SMT">
-<connects>
-<connect gate="G$1" pin="GND@1" pad="3"/>
-<connect gate="G$1" pin="GND@2" pad="5"/>
-<connect gate="G$1" pin="GNDDETECT" pad="9"/>
-<connect gate="G$1" pin="KEY" pad="7"/>
-<connect gate="G$1" pin="NRESET" pad="10"/>
-<connect gate="G$1" pin="SWDCLK" pad="4"/>
-<connect gate="G$1" pin="SWDIO" pad="2"/>
-<connect gate="G$1" pin="SWO" pad="6"/>
-<connect gate="G$1" pin="TDI" pad="8"/>
-<connect gate="G$1" pin="VCC" pad="1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="BOX" package="2X05_1.27MM_BOX_NOPOSTS">
-<connects>
-<connect gate="G$1" pin="GND@1" pad="3"/>
-<connect gate="G$1" pin="GND@2" pad="5"/>
-<connect gate="G$1" pin="GNDDETECT" pad="9"/>
-<connect gate="G$1" pin="KEY" pad="7"/>
-<connect gate="G$1" pin="NRESET" pad="10"/>
-<connect gate="G$1" pin="SWDCLK" pad="4"/>
-<connect gate="G$1" pin="SWDIO" pad="2"/>
-<connect gate="G$1" pin="SWO" pad="6"/>
-<connect gate="G$1" pin="TDI" pad="8"/>
-<connect gate="G$1" pin="VCC" pad="1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="BOXPOSTS" package="2X05_1.27MM_BOX_POSTS">
-<connects>
-<connect gate="G$1" pin="GND@1" pad="3"/>
-<connect gate="G$1" pin="GND@2" pad="5"/>
-<connect gate="G$1" pin="GNDDETECT" pad="9"/>
-<connect gate="G$1" pin="KEY" pad="7"/>
-<connect gate="G$1" pin="NRESET" pad="10"/>
-<connect gate="G$1" pin="SWDCLK" pad="4"/>
-<connect gate="G$1" pin="SWDIO" pad="2"/>
-<connect gate="G$1" pin="SWO" pad="6"/>
-<connect gate="G$1" pin="TDI" pad="8"/>
-<connect gate="G$1" pin="VCC" pad="1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 </libraries>
 <attributes>
 </attributes>
@@ -14125,7 +13975,6 @@ Warning: This is the KIT version of the AXIAL-0.3 package. This package has a sm
 <part name="C8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603K" package3d_urn="urn:adsk.eagle:package:23680/2"/>
 <part name="C9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603K" package3d_urn="urn:adsk.eagle:package:23680/2" value=".1uf"/>
 <part name="R1" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="100KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="100k"/>
-<part name="X1" library="microbuilder" deviceset="JTAG-CORTEX" device="BOX"/>
 <part name="U3" library="Conservify" library_urn="urn:adsk.eagle:library:11839183" deviceset="M24C02-WMN6TP" device="" package3d_urn="urn:adsk.eagle:package:12022475/1"/>
 <part name="J2" library="Conservify" library_urn="urn:adsk.eagle:library:11839183" deviceset="95501-6889" device="VERT" package3d_urn="urn:adsk.eagle:package:12024212/2"/>
 <part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603K" package3d_urn="urn:adsk.eagle:package:23680/2" value=".1uf"/>
@@ -14142,6 +13991,7 @@ Warning: This is the KIT version of the AXIAL-0.3 package. This package has a sm
 <part name="R9" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="100KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="300"/>
 <part name="R10" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="100KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="4.7k"/>
 <part name="R11" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="100KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="4.7k"/>
+<part name="J3" library="Conservify" library_urn="urn:adsk.eagle:library:11839183" deviceset="TAG-CONNECT" device="" package3d_urn="urn:adsk.eagle:package:16969550/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -14195,10 +14045,6 @@ Warning: This is the KIT version of the AXIAL-0.3 package. This package has a sm
 <instance part="R1" gate="G$1" x="63.5" y="-2.54" smashed="yes" rot="R90">
 <attribute name="NAME" x="61.976" y="-2.54" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="65.024" y="-2.54" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
-</instance>
-<instance part="X1" gate="G$1" x="99.06" y="91.44" smashed="yes">
-<attribute name="NAME" x="92.71" y="99.695" size="1.27" layer="95"/>
-<attribute name="VALUE" x="92.71" y="81.915" size="1.27" layer="96"/>
 </instance>
 <instance part="U3" gate="G$1" x="162.56" y="-7.62" smashed="yes">
 <attribute name="NAME" x="149.86" y="5.334" size="1.778" layer="95"/>
@@ -14261,6 +14107,9 @@ Warning: This is the KIT version of the AXIAL-0.3 package. This package has a sm
 <attribute name="NAME" x="218.44" y="61.976" size="1.778" layer="95" font="vector" rot="R180" align="bottom-center"/>
 <attribute name="VALUE" x="218.44" y="65.024" size="1.778" layer="96" font="vector" rot="R180" align="top-center"/>
 </instance>
+<instance part="J3" gate="G$1" x="96.52" y="91.44" smashed="yes">
+<attribute name="NAME" x="86.36" y="101.092" size="1.778" layer="95"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -14284,21 +14133,6 @@ Warning: This is the KIT version of the AXIAL-0.3 package. This package has a sm
 <wire x1="63.5" y1="-7.62" x2="63.5" y2="-10.16" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="-10.16" x2="81.28" y2="-10.16" width="0.1524" layer="91"/>
 <junction x="81.28" y="-10.16"/>
-</segment>
-<segment>
-<pinref part="X1" gate="G$1" pin="GND@1"/>
-<wire x1="91.44" y1="93.98" x2="73.66" y2="93.98" width="0.1524" layer="91"/>
-<label x="76.2" y="93.98" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="X1" gate="G$1" pin="GND@2"/>
-<wire x1="91.44" y1="91.44" x2="73.66" y2="91.44" width="0.1524" layer="91"/>
-<label x="76.2" y="91.44" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="X1" gate="G$1" pin="GNDDETECT"/>
-<wire x1="91.44" y1="86.36" x2="73.66" y2="86.36" width="0.1524" layer="91"/>
-<label x="76.2" y="86.36" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="GND"/>
@@ -14354,6 +14188,11 @@ Warning: This is the KIT version of the AXIAL-0.3 package. This package has a sm
 <wire x1="238.76" y1="38.1" x2="238.76" y2="17.78" width="0.1524" layer="91"/>
 <label x="241.3" y="27.94" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="J3" gate="G$1" pin="GND"/>
+<wire x1="88.9" y1="91.44" x2="71.12" y2="91.44" width="0.2032" layer="91"/>
+<label x="71.12" y="91.44" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="3V3" class="0">
 <segment>
@@ -14366,11 +14205,6 @@ Warning: This is the KIT version of the AXIAL-0.3 package. This package has a sm
 <pinref part="C9" gate="G$1" pin="1"/>
 <junction x="114.3" y="7.62"/>
 <label x="117.856" y="8.128" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="X1" gate="G$1" pin="VCC"/>
-<wire x1="91.44" y1="96.52" x2="73.66" y2="96.52" width="0.1524" layer="91"/>
-<label x="76.2" y="96.52" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="VDD"/>
@@ -14427,6 +14261,11 @@ Warning: This is the KIT version of the AXIAL-0.3 package. This package has a sm
 <junction x="223.52" y="68.58"/>
 <label x="228.6" y="68.58" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="J3" gate="G$1" pin="VCC"/>
+<wire x1="88.9" y1="93.98" x2="71.12" y2="93.98" width="0.2032" layer="91"/>
+<label x="71.12" y="93.98" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="N$6" class="0">
 <segment>
@@ -14453,59 +14292,38 @@ Warning: This is the KIT version of the AXIAL-0.3 package. This package has a sm
 </net>
 <net name="SWCLK" class="0">
 <segment>
-<pinref part="X1" gate="G$1" pin="SWDCLK"/>
-<wire x1="106.68" y1="93.98" x2="124.46" y2="93.98" width="0.1524" layer="91"/>
-<label x="121.92" y="93.98" size="1.778" layer="95" align="bottom-right"/>
-</segment>
-<segment>
 <pinref part="U2" gate="G$1" pin="PA30"/>
 <wire x1="93.98" y1="27.94" x2="106.68" y2="27.94" width="0.1524" layer="91"/>
 <label x="99.06" y="27.94" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="J3" gate="G$1" pin="SWCLK"/>
+<wire x1="104.14" y1="91.44" x2="127" y2="91.44" width="0.2032" layer="91"/>
+<label x="119.38" y="91.44" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="SWDIO" class="0">
-<segment>
-<pinref part="X1" gate="G$1" pin="SWDIO"/>
-<wire x1="106.68" y1="96.52" x2="124.46" y2="96.52" width="0.1524" layer="91"/>
-<label x="121.92" y="96.52" size="1.778" layer="95" align="bottom-right"/>
-</segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="PA31"/>
 <wire x1="93.98" y1="25.4" x2="106.68" y2="25.4" width="0.1524" layer="91"/>
 <label x="99.06" y="25.4" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="J3" gate="G$1" pin="SWDIO"/>
+<wire x1="104.14" y1="93.98" x2="127" y2="93.98" width="0.2032" layer="91"/>
+<label x="119.38" y="93.98" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="RESET" class="0">
-<segment>
-<pinref part="X1" gate="G$1" pin="NRESET"/>
-<wire x1="106.68" y1="86.36" x2="124.46" y2="86.36" width="0.1524" layer="91"/>
-<label x="121.92" y="86.36" size="1.778" layer="95" align="bottom-right"/>
-</segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="PA28/!RESET"/>
 <wire x1="93.98" y1="30.48" x2="106.68" y2="30.48" width="0.1524" layer="91"/>
 <label x="99.06" y="30.48" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="KEY" class="0">
 <segment>
-<pinref part="X1" gate="G$1" pin="KEY"/>
-<wire x1="91.44" y1="88.9" x2="73.66" y2="88.9" width="0.1524" layer="91"/>
-<label x="76.2" y="88.9" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="SWO" class="0">
-<segment>
-<pinref part="X1" gate="G$1" pin="SWO"/>
-<wire x1="106.68" y1="91.44" x2="124.46" y2="91.44" width="0.1524" layer="91"/>
-<label x="121.92" y="91.44" size="1.778" layer="95" align="bottom-right"/>
-</segment>
-</net>
-<net name="TDI" class="0">
-<segment>
-<pinref part="X1" gate="G$1" pin="TDI"/>
-<wire x1="106.68" y1="88.9" x2="124.46" y2="88.9" width="0.1524" layer="91"/>
-<label x="121.92" y="88.9" size="1.778" layer="95" align="bottom-right"/>
+<pinref part="J3" gate="G$1" pin="RESET"/>
+<wire x1="104.14" y1="86.36" x2="127" y2="86.36" width="0.2032" layer="91"/>
+<label x="119.38" y="86.36" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SDA" class="0">
